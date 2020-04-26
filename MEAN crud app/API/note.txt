@@ -1,0 +1,4 @@
+resource video link - https://www.youtube.com/watch?v=3p0wmR973Fw
+run server - node server.js
+
+Postman link - https://www.getpostman.com/collections/fd512a170ab892ae2730
