@@ -3,8 +3,8 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const mongoose = require("mongoose");
-const SMSRoutes = require('./api/routes/SMS/SMS')
-const userRoutes = require('./api/routes/users/users')
+const SMSRoutes = require('./api/routes/SMS')
+const userRoutes = require('./api/routes/users')
 
 try{
     mongoose.connect('mongodb+srv://jeevan:Passcluster123@clusterfor-gharkakhana-zoisy.mongodb.net/SMSGroupTestDatabase?retryWrites=true&w=majority',

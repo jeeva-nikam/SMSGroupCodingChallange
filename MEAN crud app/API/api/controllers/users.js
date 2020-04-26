@@ -1,16 +1,12 @@
-const express = require('express');
-const router = express.Router();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const User = require('../models/user');
 
-const User = require('../../models/user');
-
-router.post('/signup', (req, res, next) => {
+exports.user_signup = (req, res, next) => {
     User.find({email: req.body.email})
     .exec()
     .then(user => {
-        console.log("userrrr", user);
         if(user.length > 0){
             return res.status(409).json({
                 message: "Mail Exist"
@@ -47,9 +43,9 @@ router.post('/signup', (req, res, next) => {
             error: "Can't process request"
         })
     })  
-})
+}
 
-router.delete('/:userId', (req, res, next) => {
+exports.user_delete = (req, res, next) => {
     const id = req.params.userId;
     User.deleteOne({_id: id})
     .exec()
@@ -71,9 +67,9 @@ router.delete('/:userId', (req, res, next) => {
             error: err
         })
     })
-})
+}
 
-router.get('/', (req, res, next) => {
+exports.users_get_all = (req, res, next) => {
     User.find()
     .select('email')
     .exec()
@@ -98,9 +94,9 @@ router.get('/', (req, res, next) => {
             error: error
         })
     })
-})
+}
 
-router.post('/login', (req, res, next) => {
+exports.user_login = (req, res, next) => {
     User.find({email: req.body.email})
     .exec()
     .then(user => {
@@ -137,6 +133,4 @@ router.post('/login', (req, res, next) => {
                 })
             })
     })
-})
-
-module.exports = router;
+}
