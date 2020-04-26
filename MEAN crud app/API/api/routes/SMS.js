@@ -4,7 +4,7 @@ const checkAuth = require('../middleware/check-auth')
 const SMSController = require('../controllers/SMS')
 
 //Seeding database from data.json
-router.get('/seedDataBase', checkAuth, SMSController.SMSRecords_bulk_insert)
+router.get('/seedDataBase', SMSController.SMSRecords_bulk_insert)
 
 //Get all records
 router.get('/', checkAuth, SMSController.SMSRecords_get_all);
