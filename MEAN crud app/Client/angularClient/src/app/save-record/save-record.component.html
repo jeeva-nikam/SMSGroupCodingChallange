@@ -4,20 +4,24 @@
   
       <!-- Form header -->
       <div class="fadeIn first">
-        <p>Save Record</p>
+        <h3>Save Record</h3>
       </div>
   
-      <!-- Login Form -->
-      <form>
-        <input type="text" id="login" class="fadeIn second" name="city" placeholder="City">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Re-enter password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
+       <!-- Save record form -->
+       <form [formGroup]="saveRecordForm" (ngSubmit)="saveRecord()">
+        <input type="text" formControlName="city"  class="fadeIn second" name="city" placeholder="City">
+        <input type="date" formControlName="start_date"  class="fadeIn third" name="sartDate" placeholder="Start Date">
+        <input type="date" formControlName="end_date"  class="fadeIn third" name="endDate" placeholder="End Date">
+        <input type="text" formControlName="price"  class="fadeIn third" name="price" placeholder="Price">
+        <input type="text" formControlName="status"  class="fadeIn third" name="status" placeholder="Status">
+        <input type="text" formControlName="color"  class="fadeIn third" name="color" placeholder="Color">
+        <!-- <input type="submit" class="fadeIn fourth" [disabled]="!loginForm.valid" value="Log In"> -->
+        <button type="submit" class=" btn btn-lg btn-primary fadeIn fourth" [disabled]="!saveRecordForm.valid">Submit</button>
       </form>
   
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        Existing user? <a class="underlineHover" routerLink="/Login"> Login Now </a>
+        <a class="underlineHover" routerLink="/Records"> View all records </a>
       </div>
   
     </div>

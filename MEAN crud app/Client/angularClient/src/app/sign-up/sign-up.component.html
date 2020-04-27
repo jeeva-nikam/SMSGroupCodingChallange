@@ -7,15 +7,16 @@
         <h3>Account Signup</h3>
       </div>
   
-      <!-- Login Form -->
-      <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Re-enter password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
+      <!-- signUpForm Form -->
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <input type="text" formControlName="email" id="email" class="fadeIn second" name="login" placeholder="Email" #email>
+        <input type="password" formControlName="password" id="password" class="fadeIn third" name="login" placeholder="password" #password>
+        <input type="password" formControlName="repeatPassword" #repeatPassword id="repeatPassword" class="fadeIn third" name="login" placeholder="Re-enter password">
+        <button type="submit" class=" btn btn-lg btn-primary fadeIn fourth" [disabled]="!signUpForm.valid || (password.value != repeatPassword.value)">Submit</button>
+        <!-- {{signUpForm | json}} -->
       </form>
   
-      <!-- Remind Passowrd -->
+      
       <div id="formFooter">
         Existing user? <a class="underlineHover" routerLink="/Login"> Login Now </a>
       </div>

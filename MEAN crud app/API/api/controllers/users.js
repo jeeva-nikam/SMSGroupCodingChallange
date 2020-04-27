@@ -97,6 +97,7 @@ exports.users_get_all = (req, res, next) => {
 }
 
 exports.user_login = (req, res, next) => {
+    //console.log("req.body.email", req);
     User.find({email: req.body.email})
     .exec()
     .then(user => {

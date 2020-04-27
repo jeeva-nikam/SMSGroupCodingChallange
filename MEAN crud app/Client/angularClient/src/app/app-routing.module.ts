@@ -19,7 +19,8 @@ const appRoutes: Routes = [
 { path: 'Login', component: LoginComponent },
 { path: 'Records', component: RecordsComponent },
 { path: 'SignUp', component: SignUpComponent },
-{ path: 'SaveRecord', component: SaveRecordComponent }
+{ path: 'SaveRecord', component: SaveRecordComponent },
+{path: 'SaveRecord/:id', component: RecordsComponent }
 
 ];
 

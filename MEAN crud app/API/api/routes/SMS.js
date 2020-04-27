@@ -7,7 +7,7 @@ const SMSController = require('../controllers/SMS')
 router.get('/seedDataBase', SMSController.SMSRecords_bulk_insert)
 
 //Get all records
-router.get('/', SMSController.SMSRecords_get_all);
+router.get('/', checkAuth, SMSController.SMSRecords_get_all);
 
 //Save record 
 router.post('/', checkAuth, SMSController.SMSRecord_post);

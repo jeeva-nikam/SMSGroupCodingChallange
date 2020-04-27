@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 export interface SMSRecords extends SMSGroupData{
   SMSGroupData:Array<SMSGroupData>;
@@ -29,7 +30,7 @@ export interface Request{
 export class RecordsComponent implements OnInit  {
   SMSData: SMSGroupData;
   cols: any[];
-  constructor(private commonService: CommonService) { }
+  constructor(private commonService: CommonService,  private router: Router) { }
 
   ngOnInit() {
     this.getRecords();
@@ -50,6 +51,10 @@ export class RecordsComponent implements OnInit  {
       this.SMSData = data.SMSGroupData;
       console.log(this.SMSData);
     });
+  }
+
+  editRecord(id:string){
+    this.router.navigate(['/SaveRecord', {id: id}]);
   }
 
 }

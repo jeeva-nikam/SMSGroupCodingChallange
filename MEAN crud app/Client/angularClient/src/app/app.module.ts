@@ -16,7 +16,9 @@ import { HttpErrorInterceptor } from './interceptors/HttpErrorInterceptor';
 import { CookieService } from 'ngx-cookie-service';
 import {PanelModule} from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonService } from './common.service';
+
 
 @NgModule({
   declarations: [
@@ -33,11 +35,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     TableModule,
     PanelModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
-    multi: true}, CookieService],
+    multi: true}, CookieService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
