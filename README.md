@@ -13,6 +13,8 @@ MongoDb -
             1. Open postman
             2. Open collection in postman "SMSGroupTestPostmanCollection.postman_collection"
             3. Run the service call "seed database"
+                                or
+            Access this url "localhost:3200/SMS/seedDataBase"(need authentication)
 
 Install dependancies and Run app
 1. To install dependancies in Restfull api and Run - 
