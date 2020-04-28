@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 export interface SMSRecords extends SMSGroupData{
   SMSGroupData:Array<SMSGroupData>;
@@ -30,10 +31,19 @@ export interface Request{
 export class RecordsComponent implements OnInit  {
   SMSData: SMSGroupData;
   cols: any[];
+  today: Date;
+  priorDate: Date;
+  showDataLoader: boolean = false;
   constructor(private commonService: CommonService,  private router: Router) { }
-
+  dateFilterForm = new FormGroup({
+    from: new FormControl('', [Validators.required]),
+    to: new FormControl('', [Validators.required])
+  });
   ngOnInit() {
-    this.getRecords();
+    this.today = new Date()
+    this.priorDate = new Date(new Date().setDate(new Date().getDate() - 30*12*10));
+    //this.dateFilterForm.setValue({from: this.priorDate, to: this.today});
+    this.getRecords(this.priorDate, this.today);
     this.cols = [
       { field: 'city', header: 'City' },
       { field: 'start_date', header: 'Start Date' },
@@ -44,12 +54,13 @@ export class RecordsComponent implements OnInit  {
   ];
   }
 
-  getRecords(){
-   let url = this.commonService.baseUrl + 'SMS';
+  getRecords(from: Date, to:Date){
+    this.showDataLoader = true;
+   let url = this.commonService.baseUrl + 'SMS/' + from +'/' + to;
    this.commonService.getService(url)
     .subscribe(data => {
       this.SMSData = data.SMSGroupData;
-      console.log(this.SMSData);
+      this.showDataLoader = false;
     });
   }
 
@@ -72,7 +83,7 @@ export class RecordsComponent implements OnInit  {
     .subscribe(data => {
       if(data.message == 'Record deleted'){
         alert('Record deleted successfully');
-        this.getRecords();
+        this.getRecords(this.dateFilterForm.value.from, this.dateFilterForm.value.to);
       }else{
         alert('Record not deleted.');
       }

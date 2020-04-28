@@ -5,7 +5,7 @@ const data = require('../sample_data/data.json')
 //Get all records
 exports.SMSRecords_get_all = (req, res, next) => {
     SMS.find({"start_date": {"$gte": req.params.from, "$lt": req.params.to}})
-    query.exec()
+    .exec()
     .then(docs => {
         const response = { 
             count: docs.length,

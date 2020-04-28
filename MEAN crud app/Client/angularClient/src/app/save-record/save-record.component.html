@@ -16,9 +16,9 @@
         <input type="text" formControlName="price"  class="fadeIn third" name="price" placeholder="Price">
         <input type="text" formControlName="status"  class="fadeIn third" name="status" placeholder="Status">
         <input type="text" formControlName="color"  class="fadeIn third" name="color" placeholder="Color">
-        <!-- <input type="submit" class="fadeIn fourth" [disabled]="!loginForm.valid" value="Log In"> -->
+        
         <button *ngIf="!isUpdate" type="submit" class=" btn btn-lg btn-primary fadeIn fourth" [disabled]="!saveRecordForm.valid">Submit</button>
-        <button *ngIf="isUpdate" type="submit" class=" btn btn-lg btn-primary fadeIn fourth" [disabled]="!saveRecordForm.valid">Submit</button>
+        <button *ngIf="isUpdate" type="submit" class=" btn btn-lg btn-primary fadeIn fourth" [disabled]="!saveRecordForm.valid">Update</button>
       </form>
   
       <!-- Remind Passowrd -->

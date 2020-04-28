@@ -1,5 +1,16 @@
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+            <h5>Filter data by Start Date</h5>
+        </div>
+    <div class="col-md-12">
+        <form [formGroup]="dateFilterForm" (ngSubmit)="getRecords(from.value, to.value)">
+            <input type="date" formControlName="from"  class="fadeIn fromDate third col-md-4" name="sartDate" placeholder="From" #from>
+            <input type="date" formControlName="to"  class="fadeIn toDate third col-md-4" name="endDate" placeholder="To" #to>
+            <button type="submit" class="btn btn-sm btn-primary fadeIn fourth col-md-3" [disabled]="!dateFilterForm.valid">
+                <i *ngIf="showDataLoader" class="fa fa-spinner fa-spin whiteSpinner"></i> Get Data</button>
+          </form>
+    </div>
     <div class="col-md-12">
         <p-panel header="All Records" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
             <p-table [columns]="cols" [value]="SMSData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"

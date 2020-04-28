@@ -41,8 +41,7 @@ httpOptions = {
     this.setHeaders();
     return this.http.get(url, this.httpOptions).pipe(
       map(this.extractData),
-      catchError(this.handleError),
-      retry(3)
+      catchError(this.handleError)
       );
   }
 

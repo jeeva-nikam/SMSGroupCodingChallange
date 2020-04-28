@@ -48,10 +48,11 @@ export class SaveRecordComponent implements OnInit {
     price: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
     color: new FormControl('', [Validators.required]),
-    _id: new FormControl('', [Validators.required])
+    _id: new FormControl('')
   });
 
   saveRecord(){
+    console.log(this.saveRecordForm.value);
     let url = this.commonService.baseUrl + 'SMS';
     this.commonService.postService(url, this.saveRecordForm.value)
      .subscribe(data => {

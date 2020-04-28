@@ -7,7 +7,8 @@ const SMSSchema = mongoose.Schema({
     end_date:{type: Date, required: true},
     price: {type: String, required: true},
     status: {type: String, required: true},
-    color: {type: String, required: true}
+    color: {type: String, required: true},
+    created_on: {type: Date, default: Date.now}
 });
 
 
