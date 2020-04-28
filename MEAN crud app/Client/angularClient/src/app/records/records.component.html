@@ -45,7 +45,7 @@
                         </td>
                         <td>
                             <i class="fa fa-pencil pointer" (click)="editRecord(rowData._id)"></i>&nbsp;&nbsp; 
-                            <i class="fa fa-trash pointer"></i>
+                            <i class="fa fa-trash pointer" (click)="deleteConfirm(rowData._id)"></i>
                         </td>
                     </tr>
                 </ng-template>

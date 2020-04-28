@@ -18,6 +18,8 @@ import {PanelModule} from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonService } from './common.service';
+import { HeaderComponent } from './header/header.component';
+import { AuthGuard} from './auth_guard/auth_guard'
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { CommonService } from './common.service';
     SignUpComponent,
     LoginComponent,
     RecordsComponent,
-    SaveRecordComponent
+    SaveRecordComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ import { CommonService } from './common.service';
   ],
   providers: [{provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
-    multi: true}, CookieService, CommonService],
+    multi: true}, CookieService, CommonService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

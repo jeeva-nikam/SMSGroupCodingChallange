@@ -57,4 +57,26 @@ export class RecordsComponent implements OnInit  {
     this.router.navigate(['/SaveRecord', {id: id}]);
   }
 
+  deleteConfirm(id: string){
+    var r = confirm("Would you like to delete record?");
+    if (r == true) {
+      this.deleteRecord(id);
+    } else {
+      return
+    }
+  }
+
+  deleteRecord(id: string){
+    let url = this.commonService.baseUrl + 'SMS/' + id;
+   this.commonService.deleteService(url)
+    .subscribe(data => {
+      if(data.message == 'Record deleted'){
+        alert('Record deleted successfully');
+        this.getRecords();
+      }else{
+        alert('Record not deleted.');
+      }
+    });
+  }
+
 }

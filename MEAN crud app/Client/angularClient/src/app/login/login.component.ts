@@ -36,10 +36,9 @@ export class LoginComponent implements OnInit {
        if(data.token.length>0){
           let token = `Bearer ${data.token}`;
           this.cookieService.set('jsonWebToken', token, 1/24);
-      
           this.router.navigate(['/Records']);
        }else{
-     
+        alert('Authentication Failed')
        }
      });
   }
