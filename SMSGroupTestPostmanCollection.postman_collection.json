@@ -1,0 +1,363 @@
+{
+	"id": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+	"name": "SMSGroupTestPostmanCollection",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "SMS",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"order": [
+				"991a8ecc-2349-97b4-0039-891478a299c5",
+				"e0343606-17fa-d82e-f055-a20158d8fae9",
+				"bab88609-6954-d818-d08b-75b0844074ed",
+				"f7038fe4-735f-7435-5653-b23d4a81f5bd",
+				"b1109e21-20da-eaf4-ab48-03c96f34361a",
+				"cc44eb53-dd56-e5f1-f92a-296623f65cc3"
+			],
+			"owner": "1220768",
+			"folders_order": [],
+			"id": "1bf8719b-ac46-26d4-699d-2be755a0d136"
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"order": [
+				"224994cd-567f-a28a-6f2c-90dd17241626",
+				"065ee9db-142b-7d61-bcdc-e073657ed17f",
+				"e9261ab5-3384-723b-99c7-7bb5cc93f300",
+				"899d313f-a55e-caed-6ef4-3c088f09f154",
+				"5ae638bb-4951-c290-47b5-098a3f1b2115"
+			],
+			"owner": "1220768",
+			"folders_order": [],
+			"id": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea"
+		}
+	],
+	"folders_order": [
+		"0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+		"1bf8719b-ac46-26d4-699d-2be755a0d136"
+	],
+	"timestamp": 1587833714309,
+	"owner": "1220768",
+	"public": false,
+	"requests": [
+		{
+			"id": "065ee9db-142b-7d61-bcdc-e073657ed17f",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/users/",
+			"folder": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587838061516,
+			"name": "Get all users",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		},
+		{
+			"id": "224994cd-567f-a28a-6f2c-90dd17241626",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3200/users/5ea32646f735ab3f646dd36f",
+			"folder": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587837905319,
+			"name": "Delete user",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		},
+		{
+			"id": "5ae638bb-4951-c290-47b5-098a3f1b2115",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/users/login",
+			"folder": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587837950896,
+			"name": "Login User",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"email\": \"jeevan.nikam@silicus.com\",\r\n\t\"password\": \"123\" \r\n}"
+		},
+		{
+			"id": "899d313f-a55e-caed-6ef4-3c088f09f154",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3200/orders/",
+			"folder": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587838067460,
+			"name": "Get user By Id",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		},
+		{
+			"id": "991a8ecc-2349-97b4-0039-891478a299c5",
+			"headers": "authorisation: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTE3MCwiZXhwIjoxNTg3OTIyNzcwfQ.FKtdNtI4n9gy8QFsbe6L3dzfU6-zAXMpikwGDand8SU\n",
+			"headerData": [
+				{
+					"key": "authorisation",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTE3MCwiZXhwIjoxNTg3OTIyNzcwfQ.FKtdNtI4n9gy8QFsbe6L3dzfU6-zAXMpikwGDand8SU",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/SMS",
+			"folder": "1bf8719b-ac46-26d4-699d-2be755a0d136",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587919190794,
+			"name": "Get all SMS data",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		},
+		{
+			"id": "b1109e21-20da-eaf4-ab48-03c96f34361a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/SMS/5ea493291ad2d839b4db419c",
+			"folder": "1bf8719b-ac46-26d4-699d-2be755a0d136",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587845433236,
+			"name": "Update SMS data by Id",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": [],
+			"rawModeData": "\n[\n   {\n        \"propName\": \"city\", \"value\": \"Neftegorsk1\"\n   },\n   {\n    \t\"propName\": \"start_date\", \"value\": \"10/13/2013\"\n   },\n   {\n   \t\t\"propName\": \"end_date\", \"value\": \"10/18/2013\"\n   },\n   {\n   \t\t\"propName\": \"price\", \"value\": \"10\"\n   },    \n\t{\t\n\t\t\"propName\": \"status\", \"value\": \"Seldom\"\n\t\t\n\t},\n\t{\t\n\t\t\"propName\": \"color\", \"value\": \"#fd4e19}\"\n\t}\n\t]"
+		},
+		{
+			"id": "bab88609-6954-d818-d08b-75b0844074ed",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3200/SMS/5ea49696b37ccc6110a491a3",
+			"folder": "1bf8719b-ac46-26d4-699d-2be755a0d136",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587844804415,
+			"name": "Delete SMS data",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "cc44eb53-dd56-e5f1-f92a-296623f65cc3",
+			"headers": "authentication: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTE3MCwiZXhwIjoxNTg3OTIyNzcwfQ.FKtdNtI4n9gy8QFsbe6L3dzfU6-zAXMpikwGDand8SU\n",
+			"headerData": [
+				{
+					"key": "authentication",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTE3MCwiZXhwIjoxNTg3OTIyNzcwfQ.FKtdNtI4n9gy8QFsbe6L3dzfU6-zAXMpikwGDand8SU",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/SMS/seedDataBase",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587919205973,
+			"name": "localhost:3200/SMS/seedDataBase",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		},
+		{
+			"id": "e0343606-17fa-d82e-f055-a20158d8fae9",
+			"headers": "Content-Type: application/json\nauthorisation: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTkxOCwiZXhwIjoxNTg3OTIzNTE4fQ.G7ZKDqJ60fRqOnNson_vvHmhCooYBTd2CCwaFtwvVN8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorisation",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbm44N0BnbWFpbC5jb20iLCJpZCI6IjVlYTU0NGMwZGMxMjY0NTI3MDQ4ODU2YiIsImlhdCI6MTU4NzkxOTkxOCwiZXhwIjoxNTg3OTIzNTE4fQ.G7ZKDqJ60fRqOnNson_vvHmhCooYBTd2CCwaFtwvVN8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/SMS",
+			"folder": "1bf8719b-ac46-26d4-699d-2be755a0d136",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587919964362,
+			"name": "Save SMS data",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": [],
+			"rawModeData": "{\n\t\"city\":\"Delhi3\",\n\t\"start_date\":\"4/13/2013\",\n\t\"end_date\":\"5/18/2013\",\n\t\"price\":\"100\",\n\t\"status\":\"Seldom\",\n\t\"color\":\"#fd4e19\"\n}"
+		},
+		{
+			"id": "e9261ab5-3384-723b-99c7-7bb5cc93f300",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/users/signup",
+			"folder": "0e728afe-1e82-d1a8-0d4e-9c81b1270aea",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587918765454,
+			"name": "User Sign up",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"email\": \"jeevann87@gmail.com\",\r\n\t\"password\": \"123\" \r\n}"
+		},
+		{
+			"id": "f7038fe4-735f-7435-5653-b23d4a81f5bd",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbkBhYmMuY29tIiwiaWQiOiI1ZWE3MThlZmQ2NzJiMDQ5Yjg1NmZhYzQiLCJpYXQiOjE1ODgwMTk0MDUsImV4cCI6MTU4ODAyMzAwNX0.QLbKoj4CGKe88bKhb1BxKdCWM6Wpk8r8_HUpRC077C8\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbkBhYmMuY29tIiwiaWQiOiI1ZWE3MThlZmQ2NzJiMDQ5Yjg1NmZhYzQiLCJpYXQiOjE1ODgwMTk0MDUsImV4cCI6MTU4ODAyMzAwNX0.QLbKoj4CGKe88bKhb1BxKdCWM6Wpk8r8_HUpRC077C8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3200/SMS/5ea5b612121d6d3dd8aaea01",
+			"folder": "1bf8719b-ac46-26d4-699d-2be755a0d136",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588021050447,
+			"name": "Get SMS data By Id",
+			"description": "",
+			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
+			"responses": []
+		}
+	]
+}

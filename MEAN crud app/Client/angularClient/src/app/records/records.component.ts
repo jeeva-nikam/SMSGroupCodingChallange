@@ -83,7 +83,7 @@ export class RecordsComponent implements OnInit  {
     .subscribe(data => {
       if(data.message == 'Record deleted'){
         alert('Record deleted successfully');
-        this.getRecords(this.dateFilterForm.value.from, this.dateFilterForm.value.to);
+        this.getRecords(this.priorDate, this.today);
       }else{
         alert('Record not deleted.');
       }
