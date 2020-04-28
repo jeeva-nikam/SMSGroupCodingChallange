@@ -256,7 +256,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1587919205973,
-			"name": "localhost:3200/SMS/seedDataBase",
+			"name": "Seed database",
 			"description": "",
 			"collectionId": "33330faa-25e2-ec78-8e02-2630c8ae2d99",
 			"responses": []
